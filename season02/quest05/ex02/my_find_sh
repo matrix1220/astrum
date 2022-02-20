@@ -1,0 +1,4 @@
+#for file in $(find -regex ".*\.sh"); do
+#    echo "$(basename $file)"
+#done
+find -type f -regex ".*\.sh\$" | sed 's/^.*\/\([^/]\+\)\.sh$/\1/'

@@ -1,0 +1,27 @@
+<html style='background-color: black'>
+  <div id="my_bouncing_box" style= "background-color: blue; border-radius: 3px; position: absolute; left: 0px; top: 0px; min-width: 100px; min-height: 100px; text-align: center; font-weight: bold; color: #999;" >xalimeto_m</div>
+  <script type="text/javascript">
+    my_bouncing_box = document.getElementById("my_bouncing_box")
+    left2right = true
+    top2down = true
+    x = 0
+    y = 0
+    function move() {
+        windowWidth = window.innerWidth
+        windowHeight = window.innerHeight
+        x -= (-1)**left2right;
+        y -= (-1)**top2down;
+        my_bouncing_box.style.left = `${x}px`;
+        my_bouncing_box.style.top = `${y}px`;
+        
+        if(my_bouncing_box.offsetLeft<0) left2right = true;
+        else if(my_bouncing_box.offsetLeft+my_bouncing_box.offsetWidth>window.outerWidth) left2right = false;
+
+        if(my_bouncing_box.offsetTop<0) top2down = true;
+        else if(my_bouncing_box.offsetTop+my_bouncing_box.offsetHeight>windowHeight) top2down = false;
+
+    }
+    setInterval(move, 5);
+    
+  </script>
+</html>

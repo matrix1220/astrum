@@ -1,0 +1,44 @@
+.container {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+
+.container > .wrap {
+    display: flex;
+    align-items: stretch;
+}
+.container > div {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrap > div {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    background-color: #00B7EB;
+}
+.hero {
+    background-color: #FF0000;
+}
+.content {
+    background-color: #00FF00;
+}
+.sidebar {
+    background-color: #800080;
+}
+.footer {
+    background-color: #444444;
+}
+
+@media (max-width: 500px) {
+    .wrap {
+        flex-direction: column;
+    }
+}
